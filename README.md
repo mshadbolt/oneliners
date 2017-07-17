@@ -277,7 +277,9 @@ Index your bam files in parallel, but only echo the commands (`--dry-run`) rathe
 
     find *.bam | parallel --dry-run 'samtools index {}'
 
+Create list of sample names from folder structure
 
+    ls -d $ANALYSIS_DIR/$PREFIX* | xargs -n 1 basename
 
 
 ## seqtk
